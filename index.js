@@ -1,8 +1,16 @@
 const express = require('express')
+const bodyParser = require('body-parser');
 const app = express()
 const port = 3000;
 const axios = require('axios');
 const http = require("http");
+const https = require('https');
+var cors = require("cors");
+
+app.use(express.static("public"));
+app.use(bodyParser.json());
+app.use(cors());
+
 
 
 const server = http.createServer(app);
